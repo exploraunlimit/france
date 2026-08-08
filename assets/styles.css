@@ -413,11 +413,20 @@
 }
 .faq-accordion summary{
   font-family:'Fraunces',serif; font-size:16.5px; font-weight:600; color:var(--indigo-deep);
-  cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px;
+  cursor:pointer; list-style:none; display:flex; align-items:center; gap:12px;
 }
 .faq-accordion summary::-webkit-details-marker{display:none;}
-.faq-accordion summary::after{content:"+"; font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:18px;}
-.faq-accordion details[open] summary::after{content:"–";}
+.faq-accordion summary .q-text{flex:1 1 auto; min-width:0;}
+.faq-accordion summary .meta{
+  flex:0 0 148px; display:flex; align-items:center; justify-content:flex-end; gap:12px;
+}
+.faq-accordion summary .meta .tier{text-align:center;}
+.faq-accordion summary .meta::after{content:"+"; font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:18px; width:14px; text-align:right;}
+.faq-accordion details[open] summary .meta::after{content:"–";}
+@media (max-width:560px){
+  .faq-accordion summary{flex-wrap:wrap;}
+  .faq-accordion summary .meta{flex:0 0 auto; order:1; width:100%; justify-content:space-between; margin-top:6px;}
+}
 .faq-accordion .a{font-size:14px; color:var(--ink-soft); margin-top:10px; max-width:640px; line-height:1.65;}
 .faq-cat{
   font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
