@@ -425,7 +425,7 @@
 .faq-accordion details[open] summary .meta::after{content:"–";}
 @media (max-width:560px){
   .faq-accordion summary{flex-wrap:wrap;}
-  .faq-accordion summary .meta{flex:0 0 auto; order:1; width:100%; justify-content:space-between; margin-top:6px;}
+  .faq-accordion summary .meta{flex:0 0 auto; order:1; width:100%; justify-content:flex-end; gap:14px; margin-top:6px;}
 }
 .faq-accordion .a{font-size:14px; color:var(--ink-soft); margin-top:10px; max-width:640px; line-height:1.65;}
 .faq-cat{
